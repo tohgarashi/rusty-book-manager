@@ -5,6 +5,14 @@ version = 4
 [[package]]
 name = "adapter"
 version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "derive-new",
+ "kernel",
+ "shared",
+ "sqlx",
+]
 
 [[package]]
 name = "allocator-api2"
@@ -30,6 +38,23 @@ checksum = "330a5ed07fa54e4702c9d6c4174f74427fc0ef6e214bbd677ae50a5099946470"
 [[package]]
 name = "api"
 version = "0.1.0"
+dependencies = [
+ "axum",
+ "registry",
+ "sqlx",
+ "tokio",
+]
+
+[[package]]
+name = "async-trait"
+version = "0.1.92"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "82f6aeea286b8eb4dd3431a1be1b59d290ace00f5bfd8e2a159bc2a05e2c1667"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 3.0.6",
+]
 
 [[package]]
 name = "atoi"
@@ -291,6 +316,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7d5515a3834141de9eafb9717ad39eea8247b5674e6066c404e8c4b365d2a29e"
 dependencies = [
  "cmov",
+]
+
+[[package]]
+name = "derive-new"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2cdc8d50f426189eef89dac62fabfa0abb27d5cc008f25bf4156a0203325becc"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.119",
 ]
 
 [[package]]
@@ -804,6 +840,9 @@ dependencies = [
 [[package]]
 name = "kernel"
 version = "0.1.0"
+dependencies = [
+ "async-trait",
+]
 
 [[package]]
 name = "libc"
@@ -1005,6 +1044,10 @@ dependencies = [
 [[package]]
 name = "registry"
 version = "0.1.0"
+dependencies = [
+ "adapter",
+ "kernel",
+]
 
 [[package]]
 name = "rustversion"
@@ -1140,6 +1183,9 @@ dependencies = [
 [[package]]
 name = "shared"
 version = "0.1.0"
+dependencies = [
+ "anyhow",
+]
 
 [[package]]
 name = "shlex"
