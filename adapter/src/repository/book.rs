@@ -1,4 +1,3 @@
-use crate::database::{ConnectionPool, model::book::BookRow};
 use anyhow::Result;
 use async_trait::async_trait;
 use derive_new::new;
@@ -7,6 +6,8 @@ use kernel::{
     repository::book::BookRepository,
 };
 use uuid::Uuid;
+
+use crate::database::{ConnectionPool, model::book::BookRow};
 
 #[derive(new)]
 pub struct BookRepositoryImpl {
