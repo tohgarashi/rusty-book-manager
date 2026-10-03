@@ -9,6 +9,7 @@ use crate::model::{
     id::{BookId, UserId},
 };
 
+#[mockall::automock]
 #[async_trait]
 pub trait CheckoutRepository: Send + Sync {
     // 貸し出し操作を行う
